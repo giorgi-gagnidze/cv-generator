@@ -27,6 +27,7 @@
                 type="text"
                 name="firstName"
                 id="firstName"
+                onInput="getFirstName()"
                 placeholder="ანზორ"
                 required
               />
@@ -37,7 +38,8 @@
               <input
                 type="text"
                 name="laseName"
-                id="laseName"
+                id="lastName"
+                onInput="getLastName()"
                 placeholder="მუმლაძე"
                 required
               />
@@ -56,6 +58,7 @@
               cols="30"
               rows="10"
               class="about-textarea"
+              oninput="getAbout()"
               placeholder="ზოგადი ინფო შენ შესახებ"
             ></textarea>
             <label for="email">ელ. ფოსტა</label>
@@ -63,6 +66,7 @@
               type="email"
               name="email"
               id="email"
+              onInput="getEmail()"
               placeholder="anzor666@redberry.ge"
               class="email-input"
               required
@@ -73,6 +77,7 @@
               type="tel"
               name="phone"
               id="phone"
+              onInput="getPhone()"
               class="phone-input"
               placeholder="+995 551 12 34 56"
               pattern="[+995]{3}-[0-9]{3}-[0-9]{2} [0-9]{2} [0-9]{2}"
@@ -91,25 +96,24 @@
         />
         <div class="info-container">
           <div class="text-container">
-            <p class="full-name">ანზორ მუმლაძ</p>
+            <div class="fullname-container">
+              <p id="fName" class="name"></p>
+              <p id="lName" class="name"></p>
+            </div>
+
             <div class="email-phone-container">
               <div class="email-container">
                 <img src="./assets/icons/email-icon.svg" alt="email icon" />
-                <p>anzor666@redberry.ge</p>
+                <p id="emailText" class="email-text"></p>
               </div>
               <div class="phone-container">
                 <img src="./assets/icons/phone-icon.svg" alt="phone icon" />
-                <p>+995 577 12 34 56</p>
+                <p id="phoneText" class="phone-text"></p>
               </div>
             </div>
             <div class="about-container__right">
               <p class="about-title">ჩემ შესახებ</p>
-              <p class="about-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
-                voluptates adipisci doloremque sed iste architecto totam ipsum.
-                Iste vitae, explicabo eveniet amet eligendi inventore deleniti?
-                Voluptas iusto cum perferendis molestias!
-              </p>
+              <p id="aboutText" class="about-text"></p>
             </div>
           </div>
           <div class="img-container">
@@ -118,5 +122,6 @@
         </div>
       </div>
     </main>
+    <script src="./JS/script.js"></script>
   </body>
 </html>

@@ -234,7 +234,13 @@ html {
 }
 .text-container {
 }
-.full-name {
+
+.fullname-container {
+  display: flex;
+  gap: 20px;
+}
+
+.name {
   font-weight: 700;
   font-size: 34px;
   line-height: 42px;
