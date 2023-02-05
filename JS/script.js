@@ -6,6 +6,8 @@ function getFirstName() {
   result.innerText = txtValue;
 }
 
+// Input and write same time
+
 function getLastName() {
   let txt = document.getElementById("lastName");
   let txtValue = txt.value;
@@ -37,3 +39,17 @@ function getPhone() {
   let result = document.getElementById("phoneText");
   result.innerText = txtValue;
 }
+
+// Photo upload
+
+const display = document.querySelector("#img-display");
+const input = document.querySelector("#photo-upload");
+let img = document.querySelector("img");
+
+input.addEventListener("change", () => {
+  let reader = new FileReader();
+  reader.readAsDataURL(input.files[0]);
+  reader.addEventListener("load", () => {
+    display.innerHTML = `<img src=${reader.result} alt="" />`;
+  });
+});

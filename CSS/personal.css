@@ -247,6 +247,7 @@ html {
   color: #f93b1d;
   margin-bottom: 17px;
   margin-top: 20px;
+  height: 42px;
 }
 .email-phone-container {
 }
@@ -303,26 +304,9 @@ html {
   border: none;
 }
 
-/* .photo-upload::-webkit-file-upload-button {
+.upload-input {
   visibility: hidden;
 }
-
-.photo-upload::before {
-  content: "ატვირთვა";
-  width: 107px;
-  height: 27px;
-  padding: 4px 19px 6px 19px;
-  background-color: #0e80bf;
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  font-family: "HelveticaNeue";
-  border: none;
-  white-space: nowrap;
-  display: inline-block;
-} */
 
 .photo-upload {
   content: "ატვირთვა";

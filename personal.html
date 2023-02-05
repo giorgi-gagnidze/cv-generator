@@ -51,7 +51,12 @@
             <label id="upload" for="photo-upload" class="photo-upload"
               >ატვირთვა</label
             >
-            <input type="file" id="photo-upload" style="visibility: hidden" />
+            <input
+              type="file"
+              id="photo-upload"
+              class="upload-input"
+              accept="image/jpeg, image/png, image/jpg"
+            />
           </div>
           <div class="about-container">
             <label for="about">ჩემ შესახებ (არასავალდებულო)</label>
@@ -119,9 +124,7 @@
               <p id="aboutText" class="about-text"></p>
             </div>
           </div>
-          <div class="img-container">
-            <img src="./assets/images/avatar.png" alt="" />
-          </div>
+          <div class="img-container" id="img-display"></div>
         </div>
       </div>
     </main>
