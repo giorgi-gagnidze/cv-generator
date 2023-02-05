@@ -19,30 +19,48 @@
           <p class="personal-info">პირადი ინფო</p>
           <p class="page-number">1/3</p>
         </header>
-        <form class="input-container">
+        <form class="input-container" name="myForm">
           <div class="name-container">
             <div class="name-container-1">
               <label for="firstName">სახელი</label>
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                onInput="getFirstName()"
-                placeholder="ანზორ"
-                required
-              />
+              <div class="novalid-container">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  onInput="getFirstName()"
+                  onkeyup="validateFirstName()"
+                  onfocus="validateFirstName()"
+                  placeholder="ანზორ"
+                  required
+                />
+                <img
+                  src="./assets/icons/no-validate.svg"
+                  alt=""
+                  id="novalid-01"
+                />
+              </div>
               <p>მინიმუმ 2 ასო, ქართული ასოები</p>
             </div>
             <div class="name-container-2">
               <label for="lastName">გვარი</label>
-              <input
-                type="text"
-                name="laseName"
-                id="lastName"
-                onInput="getLastName()"
-                placeholder="მუმლაძე"
-                required
-              />
+              <div class="novalid-container">
+                <input
+                  type="text"
+                  name="laseName"
+                  id="lastName"
+                  onInput="getLastName()"
+                  onkeyup="validateLastName()"
+                  onfocus="validateLastName()"
+                  placeholder="მუმლაძე"
+                  required
+                />
+                <img
+                  src="./assets/icons/no-validate.svg"
+                  alt=""
+                  id="novalid-02"
+                />
+              </div>
               <p>მინიმუმ 2 ასო, ქართული ასოები</p>
             </div>
           </div>
@@ -93,7 +111,7 @@
             />
             <p>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</p>
           </div>
-          <button class="next-btn">შემდეგი</button>
+          <button class="next-btn" type="submit">შემდეგი</button>
         </form>
       </div>
       <div class="right-container">
