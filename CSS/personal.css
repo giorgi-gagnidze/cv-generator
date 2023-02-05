@@ -289,3 +289,53 @@ html {
   object-fit: cover;
   border-radius: 123px;
 }
+
+.photo-upload::file-selector-button {
+  width: 107px;
+  height: 27px;
+  background-color: #0e80bf;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  font-family: "HelveticaNeue";
+  border: none;
+}
+
+/* .photo-upload::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.photo-upload::before {
+  content: "ატვირთვა";
+  width: 107px;
+  height: 27px;
+  padding: 4px 19px 6px 19px;
+  background-color: #0e80bf;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  font-family: "HelveticaNeue";
+  border: none;
+  white-space: nowrap;
+  display: inline-block;
+} */
+
+.photo-upload {
+  content: "ატვირთვა";
+  width: 107px;
+  height: 27px;
+  padding: 4px 19px 6px 19px;
+  background-color: #0e80bf;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  font-family: "HelveticaNeue";
+  border: none;
+  cursor: pointer;
+}
