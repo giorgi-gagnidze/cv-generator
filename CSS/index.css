@@ -51,3 +51,7 @@ html {
   top: 473px;
   left: 1076px;
 }
+
+a {
+  text-decoration: none;
+}
