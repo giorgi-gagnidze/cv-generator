@@ -88,15 +88,24 @@
               placeholder="ზოგადი ინფო შენ შესახებ"
             ></textarea>
             <label for="email">ელ. ფოსტა</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              onInput="getEmail()"
-              placeholder="anzor666@redberry.ge"
-              class="email-input"
-              required
-            />
+            <div class="novalid-container">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onInput="getEmail()"
+                onKeyUp="validateEmail()"
+                onFocus="validateEmail()"
+                placeholder="anzor666@redberry.ge"
+                class="email-input"
+                required
+              />
+              <img
+                src="./assets/icons/no-validate.svg"
+                alt=""
+                id="novalid-03"
+              />
+            </div>
             <p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
             <label for="phone">მობილურის ნომერი</label>
             <input

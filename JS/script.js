@@ -95,3 +95,25 @@ function validateLastName() {
     return true;
   }
 }
+
+// Email validation
+
+function validateEmail() {
+  let emailAddress = document.getElementById("email").value; // Email address from input
+  let at = emailAddress.indexOf("@");
+  let domain = emailAddress.split("@")[1]; // Saves user input after the @ (at)
+  let novalid = document.getElementById("novalid-03"); // Novalid icon
+
+  if (at < 1 || domain != "redberry.ge") {
+    // Second test checks if the user entered a domain (example.com) after @
+    email.style.borderColor = "#EF5050";
+    email.classList.remove("input-background");
+    novalid.style.display = "block";
+    return false;
+  } else {
+    email.style.borderColor = "#98E37E";
+    email.classList.add("input-background");
+    novalid.style.display = "none";
+    return true;
+  }
+}
