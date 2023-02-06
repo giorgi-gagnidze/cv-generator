@@ -113,9 +113,10 @@
               name="phone"
               id="phone"
               onInput="getPhone()"
+              onKeyUp="validatePhone()"
+              onFocus="validatePhone()"
               class="phone-input"
               placeholder="+995 551 12 34 56"
-              pattern="[+995]{3} [0-9]{3} [0-9]{2} [0-9]{2} [0-9]{2}"
               required
             />
             <p>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</p>

@@ -117,3 +117,17 @@ function validateEmail() {
     return true;
   }
 }
+
+// Phone number validation
+
+function validatePhone() {
+  var phoneNumber = document.getElementById("phone").value;
+  var phoneno = /^\+(995)\s\d{3}\s\d{2}\s\d{2}\s\d{2}$/; // Regex for number validation
+  if (phoneNumber.match(phoneno)) {
+    console.log("True");
+    return true;
+  } else {
+    console.log("False");
+    return false;
+  }
+}
