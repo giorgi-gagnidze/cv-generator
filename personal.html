@@ -29,8 +29,8 @@
                   name="firstName"
                   id="firstName"
                   onInput="getFirstName()"
-                  onkeyup="validateFirstName()"
-                  onfocus="validateFirstName()"
+                  onKeyUp="validateFirstName()"
+                  onFocus="validateFirstName()"
                   placeholder="ანზორ"
                   required
                 />
@@ -50,8 +50,8 @@
                   name="laseName"
                   id="lastName"
                   onInput="getLastName()"
-                  onkeyup="validateLastName()"
-                  onfocus="validateLastName()"
+                  onKeyUp="validateLastName()"
+                  onFocus="validateLastName()"
                   placeholder="მუმლაძე"
                   required
                 />
@@ -108,17 +108,24 @@
             </div>
             <p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
             <label for="phone">მობილურის ნომერი</label>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              onInput="getPhone()"
-              onKeyUp="validatePhone()"
-              onFocus="validatePhone()"
-              class="phone-input"
-              placeholder="+995 551 12 34 56"
-              required
-            />
+            <div class="novalid-container">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                onInput="getPhone()"
+                onKeyUp="validatePhone()"
+                onFocus="validatePhone()"
+                class="phone-input"
+                placeholder="+995 551 12 34 56"
+                required
+              />
+              <img
+                src="./assets/icons/no-validate.svg"
+                alt=""
+                id="novalid-04"
+              />
+            </div>
             <p>უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</p>
           </div>
           <button class="next-btn" type="submit">შემდეგი</button>

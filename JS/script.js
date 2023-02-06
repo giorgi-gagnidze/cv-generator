@@ -123,11 +123,31 @@ function validateEmail() {
 function validatePhone() {
   var phoneNumber = document.getElementById("phone").value;
   var phoneno = /^\+(995)\s\d{3}\s\d{2}\s\d{2}\s\d{2}$/; // Regex for number validation
+  let novalid = document.getElementById("novalid-04"); // Novalid icon
   if (phoneNumber.match(phoneno)) {
+    phone.style.borderColor = "#98E37E";
+    phone.classList.add("input-background");
+    novalid.style.display = "none";
     console.log("True");
     return true;
   } else {
+    phone.style.borderColor = "#EF5050";
+    phone.classList.remove("input-background");
+    novalid.style.display = "block";
     console.log("False");
     return false;
   }
 }
+
+// Add space in phone number betveen charachters
+
+phone.addEventListener("keyup", function () {
+  txt = this.value;
+  if (
+    txt.length == 4 ||
+    txt.length == 8 ||
+    txt.length == 11 ||
+    txt.length == 14
+  )
+    this.value = this.value + " ";
+});
