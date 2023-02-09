@@ -22,6 +22,7 @@ html {
 .left-container {
   padding: 47px 150px 0 150px;
   background-color: #f9f9f9;
+  /* display: none; */
 }
 
 .header {
@@ -124,6 +125,10 @@ html {
   display: none;
 }
 
+#valid-01 {
+  display: none;
+}
+
 .upload-container {
   margin-top: 54px;
   display: flex;
@@ -220,6 +225,10 @@ html {
   margin-bottom: 29px;
 }
 
+.about-container textarea:focus {
+  border: 1px solid #98e37e;
+}
+
 .next-btn {
   width: 151px;
   height: 48px;
@@ -231,6 +240,7 @@ html {
   margin-top: 160px;
   align-self: flex-end;
   margin-bottom: 65px;
+  cursor: pointer;
 }
 
 .right-container {

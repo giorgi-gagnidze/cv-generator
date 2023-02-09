@@ -45,6 +45,11 @@ function getPhone() {
 const display = document.querySelector("#img-display");
 const input = document.querySelector("#photo-upload");
 let img = document.querySelector("img");
+let reader = new FileReader();
+let dis1 = document.getElementById("photo-upload").value;
+let novalid = document.getElementById("novalid-05");
+let valid = document.getElementById("valid-01");
+let empty = "";
 
 input.addEventListener("change", () => {
   let reader = new FileReader();
@@ -52,6 +57,38 @@ input.addEventListener("change", () => {
   reader.addEventListener("load", () => {
     display.innerHTML = `<img src=${reader.result} alt="" />`;
   });
+});
+
+function validatePhoto() {
+  if (dis1 == empty) {
+    console.log("False");
+    novalid.style.display = "block";
+    console.log(dis1);
+    return true;
+  } else {
+    console.log("True");
+    valid.style.display = "block";
+    console.log(dis1);
+    return false;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  validatePhoto();
+});
+
+document.getElementById("photo-upload").addEventListener("change", () => {
+  if (dis1 == empty) {
+    console.log("False");
+    novalid.style.display = "block";
+    console.log(dis1);
+    return true;
+  } else if (dis1 !== empty) {
+    console.log("True");
+    valid.style.display = "block";
+    console.log(dis1);
+    return false;
+  }
 });
 
 // First Name and Last Name validation
@@ -109,11 +146,13 @@ function validateEmail() {
     email.style.borderColor = "#EF5050";
     email.classList.remove("input-background");
     novalid.style.display = "block";
+    console.log("False");
     return false;
   } else {
     email.style.borderColor = "#98E37E";
     email.classList.add("input-background");
     novalid.style.display = "none";
+    console.log("True");
     return true;
   }
 }
@@ -128,13 +167,11 @@ function validatePhone() {
     phone.style.borderColor = "#98E37E";
     phone.classList.add("input-background");
     novalid.style.display = "none";
-    console.log("True");
     return true;
   } else {
     phone.style.borderColor = "#EF5050";
     phone.classList.remove("input-background");
     novalid.style.display = "block";
-    console.log("False");
     return false;
   }
 }
@@ -151,3 +188,13 @@ phone.addEventListener("keyup", function () {
   )
     this.value = this.value + " ";
 });
+
+// Form validation
+
+function formSubmit() {
+  validateFirstName();
+  validateFirstName();
+  validateEmail();
+  validatePhone();
+  validatePhoto();
+}
